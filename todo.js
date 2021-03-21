@@ -5,6 +5,7 @@ const toDoForm = document.querySelector(".js-toDoForm"),
     
 const PENDING_LS = "PENDING",
     FINISHED_LS = "FINISHED";
+    
 
 
 let pendingToDos = [],
@@ -81,10 +82,10 @@ function printPendingToDo(text) {
     const delBtn = document.createElement("button");
     const doneBtn = document.createElement("button");
     const span = document.createElement("span");
-    const newId = pendingToDos.length + 1;
+    const newId = Math.ceil(Math.random() * 1000000000);
     span.innerText = text;
-    delBtn.innerText = "X";
-    doneBtn.innerText = "★";
+    delBtn.innerText = "🙅🏻‍♀️";
+    doneBtn.innerText = "👌🏻";
     delBtn.addEventListener("click", deletePendingToDo);
     doneBtn.addEventListener("click", switchToDo);
     li.appendChild(span);
@@ -106,8 +107,8 @@ function printFinishedToDo(text, id) {
     const backBtn = document.createElement("button");
     const span = document.createElement("span");
     span.innerText = text;
-    delBtn.innerText = "X";
-    backBtn.innerText = "←"
+    delBtn.innerText = "🙅🏻‍♀️";
+    backBtn.innerText = "👈🏻"
     delBtn.addEventListener("click", deleteFinishedToDo);
     backBtn.addEventListener("click", notFinished);
     li.appendChild(span);
@@ -138,13 +139,13 @@ function loadToDos() {
         parsedToDos.forEach(function(toDo) {
             printPendingToDo(toDo.text)
         });
-    }
+    } 
     if(loadedFinishedToDos !== null) { 
         const parsedToDos = JSON.parse(loadedFinishedToDos);
         parsedToDos.forEach(function(toDo) {
             printFinishedToDo(toDo.text, toDo.id)
         });
-    }
+    } 
 }
 
 function init() {

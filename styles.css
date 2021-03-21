@@ -48,23 +48,23 @@ body {
     font-size: 50px;
     margin-top: 0px;
     margin-bottom: 3%;
+    color:rgb(70, 70, 70);
 }
+
 
 input {
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgba(90, 90, 90, 0.7);
     font-size: 50px;
+    color:rgb(70, 70, 70);
 }
 
 input:focus {
     outline: none;
-    border-bottom: 1px solid gold;
+    border-bottom: 1px solid rgba(210, 157, 235, 0.7);
 }
 
-.printing{
-    display: block;
-}
 
 @keyframes fadeIn {
     from {
@@ -93,4 +93,56 @@ input:focus {
 .weather-icon img{
     width: 30px;
     height: 30px;
+}
+
+.todolist {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 40px;
+    font-weight: 600;
+    color:rgb(70, 70, 70);
+}
+
+ul {
+    width: 30%;
+    height: 30%;
+    background-color: rgba(200, 200, 200, 0.3);
+    text-align: center;
+}
+
+.todolist li {
+    font-size: 25px;
+    font-weight: 400;
+    display: block;
+    margin: 10px;
+}
+
+.todolist li button {
+    font-size: 20px;
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+.todolist li button:hover {
+    background-color: azure;
+}
+
+.todolist li button:active {
+    background-color: tomato;
+    outline: none;
+}
+
+.todolist li button:last-child:active {
+    background-color: green;
+    outline: none;
+}
+
+.todolist ul {
+    margin: 30px;
+}
+
+.printing{
+    display: flex;
 }
