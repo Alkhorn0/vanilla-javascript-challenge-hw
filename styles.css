@@ -1,10 +1,65 @@
 body {
     background-color: #D3F6FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes color__change {
+    0% {
+        color:slategrey
+    }
+    20% {
+        color:mediumvioletred;
+    }
+    40% {
+        color:skyblue
+    }
+    60% {
+        color:coral;
+    }
+    80% {
+        color:springgreen;
+    }
+    100% {
+        color:olive;
+    }
+}
+
+.clock h1 {
+    font-size: 100px;
+    animation: color__change 10s linear infinite;
+}
+
+
+.weather {
+    position: absolute;
+    right: 10px;
+    font-weight: 600;
+    color: rgba(120, 120, 120, 0.7);
 }
 
 .form,
 .greetings {
     display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 50px;
+    margin-top: 0px;
+    margin-bottom: 3%;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 50px;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 1px solid gold;
 }
 
 .printing{
